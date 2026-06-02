@@ -1,5 +1,5 @@
 import stm32Asset from "@/assets/stm32-irrigation-real.jpg.asset.json";
-import niosAsset from "@/assets/nios-board-real.jpg.asset.json";
+import niosAsset from "@/assets/nios-board-enhanced.jpg.asset.json";
 
 export type Project = {
   slug: string;

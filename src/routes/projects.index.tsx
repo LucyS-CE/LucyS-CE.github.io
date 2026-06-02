@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { CornerDownRight, Github } from "lucide-react";
 import { PROJECTS } from "@/lib/projects";
 import { ProjectCard } from "@/components/ProjectCard";
+
+const GITHUB_URL = "https://github.com/LucyS-CE";
 
 export const Route = createFileRoute("/projects/")({
   head: () => ({
@@ -41,6 +44,20 @@ function ProjectsIndex() {
           </div>
         ))}
       </div>
+
+      <p className="mt-6 text-sm text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1">
+        <CornerDownRight className="h-4 w-4 text-accent shrink-0" strokeWidth={1.75} />
+        <span>More experiments, coursework, and code live on</span>
+        <a
+          href={GITHUB_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-1.5 text-foreground underline decoration-accent/40 underline-offset-4 hover:decoration-accent transition-colors"
+        >
+          <Github className="h-3.5 w-3.5" /> GitHub
+        </a>
+        <span>— check there for full project history.</span>
+      </p>
     </section>
   );
 }
