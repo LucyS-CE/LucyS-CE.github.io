@@ -1,5 +1,9 @@
 import stm32Asset from "@/assets/stm32-irrigation-real.jpg.asset.json";
 import niosAsset from "@/assets/nios-board-enhanced.jpg.asset.json";
+import fpgaBoardComm from "@/assets/fpga-board-comm.jpg";
+import miniRtos from "@/assets/mini-rtos.jpg";
+import digitalFpga from "@/assets/digital-fpga.jpg";
+import linuxConcurrency from "@/assets/linux-concurrency.jpg";
 
 export type Project = {
   slug: string;
@@ -22,7 +26,7 @@ export const PROJECTS: Project[] = [
       "Implemented and verified FPGA-based board-level communication for robotic sensor systems: stable 20 MHz SPI, UART/RS485 laser sensor polling, and SERDES link debugging.",
     tags: ["SystemVerilog", "SPI", "UART/RS485", "SERDES", "8b/10b", "FIFO", "CRC"],
     hasDetail: true,
-    image: "/src/assets/fpga-board-comm.jpg",
+    image: fpgaBoardComm,
   },
   {
     slug: "mini-rtos",
@@ -33,7 +37,7 @@ export const PROJECTS: Project[] = [
       "Cooperative multitasking kernel with task creation, context switching, system calls, scheduling policies, and a custom dynamic memory allocator — no malloc.",
     tags: ["C", "ARM Cortex-M", "ARM Asm", "SVC", "PendSV", "Scheduler", "Allocator"],
     hasDetail: true,
-    image: "/src/assets/mini-rtos.jpg",
+    image: miniRtos,
   },
   {
     slug: "nios-hw-sw-codesign",
@@ -55,7 +59,7 @@ export const PROJECTS: Project[] = [
       "FPGA digital systems with datapaths, control FSMs, pipelining, FIFO-based memory modules, and timing analysis under synthesis constraints.",
     tags: ["SystemVerilog", "Vivado", "FSM", "Datapath", "Pipelining", "FIFO", "Timing"],
     hasDetail: false,
-    image: "/src/assets/digital-fpga.jpg",
+    image: digitalFpga,
   },
   {
     slug: "stm32-irrigation",
@@ -77,6 +81,6 @@ export const PROJECTS: Project[] = [
       "Multi-threaded and multi-process C programs using shared memory, semaphores, mutexes, condition variables, and producer-consumer synchronization.",
     tags: ["C", "Linux", "pthreads", "Shared Memory", "Semaphores", "Mutex", "Cond Var"],
     hasDetail: false,
-    image: "/src/assets/linux-concurrency.jpg",
+    image: linuxConcurrency,
   },
 ];
