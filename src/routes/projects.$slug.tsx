@@ -302,6 +302,7 @@ function ProjectDetail() {
       summary={detail.summary}
       tags={project.tags}
       sections={detail.sections}
+      image={project.image}
     />
   );
 }
