@@ -163,7 +163,7 @@ function Index() {
         <div className="grid sm:grid-cols-2 gap-px bg-border border border-border">
           {PROJECTS.map((p) => (
             <div key={p.slug} className="bg-background">
-              <ProjectCard project={p} />
+              <ProjectCard project={p} showImage={false} />
             </div>
           ))}
         </div>

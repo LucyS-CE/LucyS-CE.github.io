@@ -1,3 +1,6 @@
+import stm32Asset from "@/assets/stm32-irrigation-real.jpg.asset.json";
+import niosAsset from "@/assets/nios-board-real.jpg.asset.json";
+
 export type Project = {
   slug: string;
   number: string;
@@ -41,7 +44,7 @@ export const PROJECTS: Project[] = [
       "FPGA-based embedded systems using a Nios II soft-core processor, custom peripherals, memory-mapped I/O, polling, and interrupt-driven control.",
     tags: ["C", "Verilog", "Quartus", "Nios II", "Qsys", "MMIO", "Interrupts"],
     hasDetail: true,
-    image: "/src/assets/nios-codesign.jpg",
+    image: niosAsset.url,
   },
   {
     slug: "digital-hw-fpga",
@@ -63,7 +66,7 @@ export const PROJECTS: Project[] = [
       "Scaled-time irrigation controller using STM32 peripherals, sensor input, pump control, zone actuation, and PCB assembly.",
     tags: ["STM32", "CubeIDE", "GPIO", "PWM", "UART", "ADC", "Timers", "PCB"],
     hasDetail: false,
-    image: "/src/assets/stm32-irrigation.jpg",
+    image: stm32Asset.url,
   },
   {
     slug: "linux-concurrency",
