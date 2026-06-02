@@ -1,35 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { ArrowRight, CornerDownRight, Github, Linkedin, Mail, FileText } from "lucide-react";
 import { PROJECTS } from "@/lib/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 
-// ───────────────────────────────────────────────────────────
-// EDIT ME — quick site copy you may want to change often
-// ───────────────────────────────────────────────────────────
 const AVAILABILITY = "Available · Fall 2026";
 const GITHUB_URL = "https://github.com/LucyS-CE";
-// ───────────────────────────────────────────────────────────
-
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Lucy Sun — FPGA & Embedded Systems Engineer" },
-      {
-        name: "description",
-        content:
-          "Computer Engineering at the University of Waterloo. FPGA, embedded systems, firmware, and hardware/software co-design.",
-      },
-      { property: "og:title", content: "Lucy Sun — FPGA & Embedded Systems Engineer" },
-      {
-        property: "og:description",
-        content:
-          "Portfolio: FPGA board communication, mini RTOS on ARM Cortex-M, Nios II HW/SW co-design.",
-      },
-    ],
-  }),
-  component: Index,
-});
 
 const EXPERIENCE = [
   {
@@ -63,7 +38,7 @@ const EXPERIENCE = [
   },
 ];
 
-function Index() {
+export default function Index() {
   return (
     <>
       {/* Hero */}
@@ -81,12 +56,11 @@ function Index() {
                 Lucy Sun<span className="text-accent">.</span>
               </h1>
               <p className="mt-6 max-w-2xl text-lg md:text-xl text-foreground/80 leading-relaxed">
-                Computer Engineering @ University of Waterloo. I design and verify systems where
-                <span className="text-foreground"> silicon meets software</span> — FPGAs, RTOS
-                kernels, and the protocols that let boards talk.
+                Computer Engineering @ University of Waterloo. I build FPGA, embedded firmware,
+                and hardware/software co-designed systems.
               </p>
 
-              <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-xs">
+              <div className="mt-8 flex flex-wrap items-center gap-3 font-mono text-xs text-muted-foreground">
                 {["FPGA", "Embedded Systems", "Firmware", "HW/SW Co-design"].map((t, i) => (
                   <span key={t} className="flex items-center gap-3">
                     {i > 0 && <span className="text-border">/</span>}
@@ -103,7 +77,7 @@ function Index() {
                   <FileText className="h-4 w-4" /> Resume
                 </Link>
                 <a
-                  href="https://github.com/"
+                  href={GITHUB_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 border border-border px-4 py-2.5 text-sm font-medium hover:bg-secondary transition-colors"
@@ -111,7 +85,7 @@ function Index() {
                   <Github className="h-4 w-4" /> GitHub
                 </a>
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/in/guoxiaoqingsun/"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 border border-border px-4 py-2.5 text-sm font-medium hover:bg-secondary transition-colors"

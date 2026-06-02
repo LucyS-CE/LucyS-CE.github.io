@@ -1,31 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { CornerDownRight, Github } from "lucide-react";
 import { PROJECTS } from "@/lib/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 
 const GITHUB_URL = "https://github.com/LucyS-CE";
 
-export const Route = createFileRoute("/projects/")({
-  head: () => ({
-    meta: [
-      { title: "Projects — Lucy Sun" },
-      {
-        name: "description",
-        content:
-          "FPGA, embedded firmware, and hardware/software co-design projects by Lucy Sun.",
-      },
-      { property: "og:title", content: "Projects — Lucy Sun" },
-      {
-        property: "og:description",
-        content:
-          "FPGA board communication, mini RTOS, Nios II co-design, STM32, and Linux systems projects.",
-      },
-    ],
-  }),
-  component: ProjectsIndex,
-});
-
-function ProjectsIndex() {
+export default function ProjectsIndex() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
       <p className="label">Index · All projects</p>

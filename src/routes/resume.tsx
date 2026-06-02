@@ -1,25 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Download, FileText, ExternalLink } from "lucide-react";
 
-export const Route = createFileRoute("/resume")({
-  head: () => ({
-    meta: [
-      { title: "Resume — Lucy Sun" },
-      {
-        name: "description",
-        content: "Download Lucy Sun's resume — FPGA, embedded systems, firmware.",
-      },
-      { property: "og:title", content: "Resume — Lucy Sun" },
-      {
-        property: "og:description",
-        content: "Download Lucy Sun's resume — FPGA, embedded systems, firmware.",
-      },
-    ],
-  }),
-  component: Resume,
-});
-
-function Resume() {
+export default function Resume() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-20 md:py-28">
       <p className="label">Document</p>
@@ -45,14 +26,14 @@ function Resume() {
 
         <div className="mt-6 flex flex-wrap gap-2">
           <a
-            href="/resume.pdf"
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
             download
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 text-sm font-medium hover:bg-foreground/85 transition-colors"
           >
             <Download className="h-4 w-4" /> Download PDF
           </a>
           <a
-            href="/resume.pdf"
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 border border-border px-4 py-2.5 text-sm font-medium hover:bg-secondary transition-colors"
