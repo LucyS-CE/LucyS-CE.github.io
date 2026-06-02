@@ -27,7 +27,7 @@ export default function Resume() {
         <div className="mt-6 flex flex-wrap gap-2">
           <a
             href={`${import.meta.env.BASE_URL}resume.pdf`}
-            download
+            download="Lucy_Sun_Resume.pdf"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 text-sm font-medium hover:bg-foreground/85 transition-colors"
           >
             <Download className="h-4 w-4" /> Download PDF
