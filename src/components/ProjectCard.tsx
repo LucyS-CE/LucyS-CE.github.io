@@ -2,19 +2,21 @@ import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import type { Project } from "@/lib/projects";
 
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({ project, showImage = true }: { project: Project; showImage?: boolean }) {
   const inner = (
     <article className="group relative h-full border border-border bg-card transition-colors hover:border-foreground/40 overflow-hidden">
-      <div className="aspect-[16/9] overflow-hidden border-b border-border">
-        <img
-          src={project.image}
-          alt={project.title}
-          loading="lazy"
-          width={1024}
-          height={768}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-      </div>
+      {showImage && (
+        <div className="aspect-[16/9] overflow-hidden border-b border-border">
+          <img
+            src={project.image}
+            alt={project.title}
+            loading="lazy"
+            width={1024}
+            height={768}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+      )}
       <div className="p-6">
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-baseline gap-3">
