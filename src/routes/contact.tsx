@@ -9,7 +9,7 @@ const CHANNELS = [
   },
   {
     label: "GitHub",
-    value: "github.com/lucysun",
+    value: "github.com/LucyS-CE",
     href: "https://github.com/LucyS-CE",
     icon: Github,
   },
