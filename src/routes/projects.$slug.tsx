@@ -1,4 +1,5 @@
-import { createFileRoute, notFound } from "@tanstack/react-router";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 import { DetailLayout, Bullets, type Section } from "@/components/DetailLayout";
 import { PROJECTS } from "@/lib/projects";
 
@@ -263,37 +264,26 @@ const DETAILS: Record<string, Detail> = {
   },
 };
 
-export const Route = createFileRoute("/projects/$slug")({
-  loader: ({ params }) => {
-    const project = PROJECTS.find((p) => p.slug === params.slug);
-    const detail = DETAILS[params.slug];
-    if (!project || !detail) throw notFound();
-    return { project, detail };
-  },
-  head: ({ loaderData }) => {
-    if (!loaderData) return {};
-    const { project } = loaderData;
-    const title = `${project.title} — Lucy Sun`;
-    return {
-      meta: [
-        { title },
-        { name: "description", content: project.description },
-        { property: "og:title", content: title },
-        { property: "og:description", content: project.description },
-      ],
-    };
-  },
-  component: ProjectDetail,
-  notFoundComponent: () => (
-    <div className="mx-auto max-w-2xl px-6 py-24 text-center">
-      <p className="label">Not found</p>
-      <h1 className="font-display mt-4 text-4xl font-semibold">Project not found</h1>
-    </div>
-  ),
-});
+export default function ProjectDetail() {
+  const { slug = "" } = useParams<{ slug: string }>();
+  const project = PROJECTS.find((p) => p.slug === slug);
+  const detail = DETAILS[slug];
 
-function ProjectDetail() {
-  const { project, detail } = Route.useLoaderData();
+  useEffect(() => {
+    if (project) {
+      document.title = `${project.title} — Lucy Sun`;
+    }
+  }, [project]);
+
+  if (!project || !detail) {
+    return (
+      <div className="mx-auto max-w-2xl px-6 py-24 text-center">
+        <p className="label">Not found</p>
+        <h1 className="font-display mt-4 text-4xl font-semibold">Project not found</h1>
+      </div>
+    );
+  }
+
   return (
     <DetailLayout
       number={project.number}

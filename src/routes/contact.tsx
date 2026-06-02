@@ -1,23 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Mail, Github, Linkedin, ArrowUpRight } from "lucide-react";
-
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — Lucy Sun" },
-      {
-        name: "description",
-        content: "Get in touch with Lucy Sun — email, GitHub, LinkedIn.",
-      },
-      { property: "og:title", content: "Contact — Lucy Sun" },
-      {
-        property: "og:description",
-        content: "Get in touch with Lucy Sun — email, GitHub, LinkedIn.",
-      },
-    ],
-  }),
-  component: Contact,
-});
 
 const CHANNELS = [
   {
@@ -40,7 +21,7 @@ const CHANNELS = [
   },
 ];
 
-function Contact() {
+export default function Contact() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-20 md:py-28">
       <p className="label">Channels</p>
@@ -75,10 +56,6 @@ function Contact() {
           </li>
         ))}
       </ul>
-
-      <p className="mt-8 font-mono text-xs text-muted-foreground">
-        Update the email and handle URLs in <code className="text-foreground">src/routes/contact.tsx</code>.
-      </p>
     </section>
   );
 }
