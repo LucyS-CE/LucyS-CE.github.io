@@ -1,5 +1,5 @@
-import stm32Asset from "@/assets/stm32-irrigation-real.jpg.asset.json";
-import niosAsset from "@/assets/nios-board-enhanced.jpg.asset.json";
+import stm32Image from "@/assets/stm32-irrigation-real.jpg";
+import niosImage from "@/assets/nios-board-enhanced.jpg";
 import fpgaBoardComm from "@/assets/fpga-board-comm.jpg";
 import miniRtos from "@/assets/mini-rtos.jpg";
 import digitalFpga from "@/assets/digital-fpga.jpg";
