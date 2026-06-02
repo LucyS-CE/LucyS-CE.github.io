@@ -43,8 +43,7 @@ export default function Resume() {
         </div>
 
         <p className="mt-6 font-mono text-xs text-muted-foreground">
-          Note: drop your latest <code className="text-foreground">resume.pdf</code> into the
-          <code className="text-foreground"> /public</code> folder to enable downloads.
+          Note: To update the resume, replace <code className="text-foreground">resume.pdf</code> in the <code className="text-foreground">/public</code> folder.
         </p>
       </div>
     </section>
