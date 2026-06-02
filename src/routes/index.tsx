@@ -3,6 +3,14 @@ import { ArrowRight, Github, Linkedin, Mail, FileText } from "lucide-react";
 import { PROJECTS } from "@/lib/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 
+// ───────────────────────────────────────────────────────────
+// EDIT ME — quick site copy you may want to change often
+// ───────────────────────────────────────────────────────────
+const AVAILABILITY = "Available · Summer 2026";
+const GITHUB_URL = "https://github.com/";
+// ───────────────────────────────────────────────────────────
+
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -67,7 +75,7 @@ function Index() {
             <div className="md:col-span-9">
               <p className="label flex items-center gap-3">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-                Available · Summer 2026
+                {AVAILABILITY}
               </p>
               <h1 className="font-display mt-6 text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tight text-foreground leading-[0.95]">
                 Lucy Sun<span className="text-accent">.</span>
@@ -159,6 +167,20 @@ function Index() {
             </div>
           ))}
         </div>
+
+        <p className="mt-6 text-sm text-muted-foreground flex flex-wrap items-center gap-2">
+          <span className="font-mono text-xs text-accent">↳</span>
+          More experiments, coursework, and code live on
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 text-foreground underline decoration-accent/40 underline-offset-4 hover:decoration-accent transition-colors"
+          >
+            <Github className="h-3.5 w-3.5" /> GitHub
+          </a>
+          — check there for full project history.
+        </p>
       </section>
 
       {/* Experience */}
