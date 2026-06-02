@@ -6,8 +6,8 @@ import { ProjectCard } from "@/components/ProjectCard";
 // ───────────────────────────────────────────────────────────
 // EDIT ME — quick site copy you may want to change often
 // ───────────────────────────────────────────────────────────
-const AVAILABILITY = "Available · Summer 2026";
-const GITHUB_URL = "https://github.com/";
+const AVAILABILITY = "Available · Fall 2026";
+const GITHUB_URL = "https://github.com/LucyS-CE";
 // ───────────────────────────────────────────────────────────
 
 
