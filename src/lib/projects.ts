@@ -6,6 +6,7 @@ export type Project = {
   description: string;
   tags: string[];
   hasDetail: boolean;
+  image: string;
 };
 
 export const PROJECTS: Project[] = [
@@ -18,6 +19,7 @@ export const PROJECTS: Project[] = [
       "Implemented and verified FPGA-based board-level communication for robotic sensor systems: stable 20 MHz SPI, UART/RS485 laser sensor polling, and SERDES link debugging.",
     tags: ["SystemVerilog", "SPI", "UART/RS485", "SERDES", "8b/10b", "FIFO", "CRC"],
     hasDetail: true,
+    image: "/src/assets/fpga-board-comm.jpg",
   },
   {
     slug: "mini-rtos",
@@ -28,6 +30,7 @@ export const PROJECTS: Project[] = [
       "Cooperative multitasking kernel with task creation, context switching, system calls, scheduling policies, and a custom dynamic memory allocator — no malloc.",
     tags: ["C", "ARM Cortex-M", "ARM Asm", "SVC", "PendSV", "Scheduler", "Allocator"],
     hasDetail: true,
+    image: "/src/assets/mini-rtos.jpg",
   },
   {
     slug: "nios-hw-sw-codesign",
@@ -38,6 +41,7 @@ export const PROJECTS: Project[] = [
       "FPGA-based embedded systems using a Nios II soft-core processor, custom peripherals, memory-mapped I/O, polling, and interrupt-driven control.",
     tags: ["C", "Verilog", "Quartus", "Nios II", "Qsys", "MMIO", "Interrupts"],
     hasDetail: true,
+    image: "/src/assets/nios-codesign.jpg",
   },
   {
     slug: "digital-hw-fpga",
@@ -48,6 +52,7 @@ export const PROJECTS: Project[] = [
       "FPGA digital systems with datapaths, control FSMs, pipelining, FIFO-based memory modules, and timing analysis under synthesis constraints.",
     tags: ["SystemVerilog", "Vivado", "FSM", "Datapath", "Pipelining", "FIFO", "Timing"],
     hasDetail: false,
+    image: "/src/assets/digital-fpga.jpg",
   },
   {
     slug: "stm32-irrigation",
@@ -58,6 +63,7 @@ export const PROJECTS: Project[] = [
       "Scaled-time irrigation controller using STM32 peripherals, sensor input, pump control, zone actuation, and PCB assembly.",
     tags: ["STM32", "CubeIDE", "GPIO", "PWM", "UART", "ADC", "Timers", "PCB"],
     hasDetail: false,
+    image: "/src/assets/stm32-irrigation.jpg",
   },
   {
     slug: "linux-concurrency",
@@ -68,5 +74,6 @@ export const PROJECTS: Project[] = [
       "Multi-threaded and multi-process C programs using shared memory, semaphores, mutexes, condition variables, and producer-consumer synchronization.",
     tags: ["C", "Linux", "pthreads", "Shared Memory", "Semaphores", "Mutex", "Cond Var"],
     hasDetail: false,
+    image: "/src/assets/linux-concurrency.jpg",
   },
 ];
