@@ -22,20 +22,20 @@ export const Route = createFileRoute("/contact")({
 const CHANNELS = [
   {
     label: "Email",
-    value: "lucy.sun@uwaterloo.ca",
-    href: "mailto:lucy.sun@uwaterloo.ca",
+    value: "g33sun@uwaterloo.ca",
+    href: "mailto:g33sun@uwaterloo.ca",
     icon: Mail,
   },
   {
     label: "GitHub",
     value: "github.com/lucysun",
-    href: "https://github.com/",
+    href: "https://github.com/LucyS-CE",
     icon: Github,
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/lucysun",
-    href: "https://www.linkedin.com/",
+    value: "linkedin.com/in/guoxiaoqingsun",
+    href: "https://www.linkedin.com/in/guoxiaoqingsun/",
     icon: Linkedin,
   },
 ];
