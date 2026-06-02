@@ -11,6 +11,7 @@ export function DetailLayout({
   summary,
   tags,
   sections,
+  image,
 }: {
   number: string;
   type: string;
@@ -18,6 +19,7 @@ export function DetailLayout({
   summary: string;
   tags: string[];
   sections: Section[];
+  image?: string;
 }) {
   return (
     <article className="mx-auto max-w-4xl px-6 py-16 md:py-24">
@@ -27,6 +29,19 @@ export function DetailLayout({
       >
         <ArrowLeft className="h-3.5 w-3.5" /> All projects
       </Link>
+
+      {image && (
+        <div className="mt-8 aspect-[21/9] overflow-hidden border border-border">
+          <img
+            src={image}
+            alt={title}
+            loading="lazy"
+            width={1024}
+            height={768}
+            className="h-full w-full object-cover"
+          />
+        </div>
+      )}
 
       <header className="mt-8 border-b border-border pb-10">
         <div className="flex items-center gap-3">
