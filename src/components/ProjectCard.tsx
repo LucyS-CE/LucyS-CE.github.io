@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import type { Project } from "@/lib/projects";
 
@@ -53,7 +53,7 @@ export function ProjectCard({ project, showImage = true }: { project: Project; s
 
   if (!project.hasDetail) return inner;
   return (
-    <Link to="/projects/$slug" params={{ slug: project.slug }} className="block h-full">
+    <Link to={`/projects/${project.slug}`} className="block h-full">
       {inner}
     </Link>
   );
