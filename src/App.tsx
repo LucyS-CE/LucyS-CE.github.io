@@ -6,12 +6,12 @@ import Resume from "./routes/resume";
 import ProjectsIndex from "./routes/projects.index";
 import ProjectDetail from "./routes/projects.$slug";
 
-const NAV = [
+const NAV: { to: string; label: string; end?: boolean }[] = [
   { to: "/", label: "Home", end: true },
   { to: "/projects", label: "Projects" },
   { to: "/resume", label: "Resume" },
   { to: "/contact", label: "Contact" },
-] as const;
+];
 
 function SiteHeader() {
   return (
