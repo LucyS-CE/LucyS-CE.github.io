@@ -48,7 +48,7 @@ export default function Index() {
         <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
           <div className="grid md:grid-cols-12 gap-8 items-end">
             <div className="md:col-span-9">
-              <p className="label flex items-center gap-3">
+              <p className="label text-[13px] flex items-center gap-3">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
                 {AVAILABILITY}
               </p>
