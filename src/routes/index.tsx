@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Github, Linkedin, Mail, FileText } from "lucide-react";
+import { ArrowRight, CornerDownRight, Github, Linkedin, Mail, FileText } from "lucide-react";
 import { PROJECTS } from "@/lib/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 
@@ -168,9 +168,9 @@ function Index() {
           ))}
         </div>
 
-        <p className="mt-6 text-sm text-muted-foreground flex flex-wrap items-center gap-2">
-          <span className="font-mono text-xs text-accent">↳</span>
-          More experiments, coursework, and code live on
+        <p className="mt-6 text-sm text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1">
+          <CornerDownRight className="h-4 w-4 text-accent shrink-0" strokeWidth={1.75} />
+          <span>More experiments, coursework, and code live on</span>
           <a
             href={GITHUB_URL}
             target="_blank"
@@ -179,7 +179,7 @@ function Index() {
           >
             <Github className="h-3.5 w-3.5" /> GitHub
           </a>
-          — check there for full project history.
+          <span>— check there for full project history.</span>
         </p>
       </section>
 
