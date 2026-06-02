@@ -7,8 +7,7 @@ const GITHUB_URL = "https://github.com/LucyS-CE";
 export default function ProjectsIndex() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-      <p className="label">Index · All projects</p>
-      <h1 className="font-display mt-4 text-4xl md:text-6xl font-semibold tracking-tight">
+      <h1 className="font-display text-4xl md:text-6xl font-semibold tracking-tight">
         Projects<span className="text-accent">.</span>
       </h1>
       <p className="mt-5 max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed">
