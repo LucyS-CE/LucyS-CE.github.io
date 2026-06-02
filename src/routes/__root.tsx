@@ -141,7 +141,7 @@ function SiteHeader() {
             <Link
               key={item.to}
               to={item.to}
-              activeOptions={{ exact: item.exact }}
+              activeOptions={{ exact: "exact" in item ? item.exact : false }}
               activeProps={{ className: "text-foreground bg-secondary" }}
               inactiveProps={{ className: "text-muted-foreground hover:text-foreground" }}
               className="rounded-sm px-3 py-1.5 transition-colors"
