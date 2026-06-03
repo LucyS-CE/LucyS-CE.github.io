@@ -48,7 +48,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="label">{c.label}</p>
-                  <p className="font-mono text-sm text-foreground mt-1">{c.value}</p>
+                  <p className="font-mono text-xs md:text-sm text-foreground mt-1 break-all">{c.value}</p>
                 </div>
               </div>
               <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground" />
