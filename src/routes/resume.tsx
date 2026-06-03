@@ -17,7 +17,7 @@ export default function Resume() {
             <FileText className="h-6 w-6 text-accent" />
           </div>
           <div className="flex-1">
-            <h2 className="font-display text-xl font-semibold">Lucy_Sun_Resume.pdf</h2>
+            <h2 className="font-display text-base md:text-xl font-semibold break-words">Lucy_Sun_Resume.pdf</h2>
             <p className="font-mono text-xs text-muted-foreground mt-1">
               PDF · Updated {new Date().toLocaleDateString("en-US", { month: "short", year: "numeric" })}
             </p>
