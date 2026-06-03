@@ -40,18 +40,18 @@ export default function Contact() {
               href={c.href}
               target={c.href.startsWith("http") ? "_blank" : undefined}
               rel="noreferrer"
-              className="group flex items-center justify-between gap-6 p-6 hover:bg-secondary/60 transition-colors"
+              className="group flex items-center justify-between gap-4 p-6 hover:bg-secondary/60 transition-colors"
             >
-              <div className="flex items-center gap-5">
-                <div className="border border-border p-2 md:p-2.5">
+              <div className="flex items-center gap-5 min-w-0 flex-1">
+                <div className="border border-border p-2 md:p-2.5 shrink-0">
                   <c.icon className="h-3.5 w-3.5 md:h-4 md:w-4 text-accent" />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <p className="label">{c.label}</p>
                   <p className="font-mono text-[11px] md:text-sm text-foreground mt-1 truncate">{c.value}</p>
                 </div>
               </div>
-              <ArrowUpRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground" />
+              <ArrowUpRight className="h-3.5 w-3.5 md:h-4 md:w-4 shrink-0 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground" />
             </a>
           </li>
         ))}
